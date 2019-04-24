@@ -17,8 +17,8 @@
 	</div>
 </body>
 <script>
-$("input[type=text]").keypress(function(e){
-	if(e.keyCode == 13)
+$("input[type=text]").keypress(function(e){//인풋타입이 텍스트인곳에서 키를 누르면
+	if(e.keyCode == 13)//엔터키
 		Search();
 });
 function Search(){
@@ -35,10 +35,11 @@ function Search(){
 						htmlStr += "<tr>";
 						htmlStr += "<td>"+data[i].title+"</td>";
 						htmlStr += "<td><a>"+data[i].link+"</a></td>";
+						//i번째의 data배열에서 title,link를 가져옴
 						htmlStr += "</tr>";
 					}
 					htmlStr += "</table>";
-					$("#result").html(htmlStr);
+					$("#result").html(htmlStr);//결과창에 뿌림
 				},
 			
 			error:function(e){
